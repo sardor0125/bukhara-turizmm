@@ -1,0 +1,2 @@
+# bukhara-turizmm
+bykhara turizmm
