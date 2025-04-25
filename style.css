@@ -1,0 +1,486 @@
+/* Add Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+/* Umumiy stillar */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body font family - applies to everything unless overridden */
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Header qismi */
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("8bf4326bce9cd81b8ab96e5d13ea34ee.png"); /* Rasm manzilini tekshiring */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden; /* Gorizontal skrollni oldini olish */
+}
+
+/* Rasm ustiga qora rang qatlami */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay rangini kamaytirdik */
+    z-index: -1;
+}
+
+
+/* Navigatsiya qismi */
+nav {
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    flex-wrap: wrap; /* Joy yetmasa pastga tushishga ruxsat berish */
+    z-index: 10;
+    position: relative;
+}
+
+.nav-left a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-left a:hover {
+    color: rgb(223, 205, 104);
+}
+
+
+.nav-right {
+    display: flex; /* Har doim flex bo'lib qoladi */
+    gap: 2em;
+    flex-wrap: wrap; /* Joy yetmasa pastga tushishga ruxsat berish */
+    justify-content: center; /* Elementlar pastga tushsa markazga tekislash */
+}
+
+.nav-right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-right a:hover {
+     color: rgb(223, 205, 104);
+     border-bottom-color: rgb(223, 205, 104);
+}
+
+.Home {
+    color: rgb(223, 205, 104);
+     border-bottom-color: rgb(223, 205, 104);
+}
+
+/* Hamburger menu button stilini butunlay yashiramiz */
+.nav-toggle {
+    display: none !important; /* Tugmani butunlay yashirish */
+}
+
+
+/* Seksiya (asosiy kontent) stillari */
+section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding: 20px 40px;
+    justify-content: center;
+    z-index: 5;
+}
+
+.center1,
+.center2,
+.center3,
+.buton {
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 15px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.center1 {
+    margin-top: 0;
+}
+
+.center1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 65px;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.center2 {
+    color: #fff;
+    margin-top: 5px;
+    margin-right: 0;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.center2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 80px;
+}
+
+
+.center3 {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-right: 0;
+}
+
+.center3 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.buton {
+    display: inline-block;
+    padding: 10px 15px; /* O'ng/chap paddingni kamaytirdik (18px dan 15px ga) */
+    margin-top: 40px;
+    background-color: transparent;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border-radius: 5px;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap; /* Matnni bitta qatorda ushlab turish */
+}
+
+.buton:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.buton a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Animation stillari */
+.tracking-in-contract {
+    -webkit-animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+.roll-in-bottom {
+    -webkit-animation: roll-in-bottom 1s ease-out both;
+    animation: roll-in-bottom 1s ease-out both;
+}
+
+@-webkit-keyframes roll-in-bottom {
+    0% {
+        -webkit-transform: translateY(800px) rotate(540deg);
+        transform: translateY(800px) rotate(540deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) rotate(0deg);
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes roll-in-bottom {
+    0% {
+        -webkit-transform: translateY(800px) rotate(540deg);
+        transform: translateY(800px) rotate(540deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) rotate(0deg);
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+
+/* --- Media Querylar (Moslashtirish uchun) --- */
+
+/* planshetlar va kichik noutbuklar (masalan, 992px gacha) */
+@media (max-width: 992px) {
+    nav {
+        padding: 0 15px;
+        justify-content: center;
+    }
+     .nav-left a {
+        font-size: 22px;
+    }
+    .nav-right {
+        gap: 1em;
+         justify-content: center;
+    }
+    .nav-right a {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 15px;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .center1,
+    .center2,
+    .center3,
+    .buton {
+        margin-right: 0;
+        max-width: 500px;
+    }
+
+    .center1 a {
+        font-size: 40px;
+    }
+
+    .center2 a {
+        font-size: 50px;
+    }
+
+    .center3 a {
+        font-size: 18px;
+    }
+
+    .buton {
+        padding: 8px 12px; /* O'ng/chap paddingni kamaytirdik (15px dan 12px ga) */
+        font-size: 15px;
+        margin-top: 30px;
+         white-space: nowrap;
+    }
+}
+
+/* Telefonlar va planshetlar (masalan, 768px gacha) */
+@media (max-width: 768px) {
+     header {
+         background-attachment: scroll;
+         overflow-x: hidden;
+     }
+
+    nav {
+        padding: 0 15px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav-left {
+        margin-bottom: 10px;
+    }
+
+    .nav-left a {
+         font-size: 22px;
+    }
+
+    .nav-toggle {
+        display: none !important;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        min-height: auto;
+        background-color: transparent;
+        padding: 0;
+        align-items: center;
+        gap: 0.5em;
+        box-shadow: none;
+        z-index: auto;
+        overflow-y: visible;
+    }
+
+    .nav-right a {
+        font-size: 16px;
+        margin: 5px 0;
+        padding: 5px 10px;
+        border-bottom: none;
+    }
+     .nav-right a:hover {
+        border-bottom-color: transparent;
+     }
+     .nav-right .Home {
+         border-bottom-color: transparent;
+     }
+
+
+    section {
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+     .center1,
+    .center2,
+    .center3,
+    .buton {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 95%;
+    }
+
+    .center1 a {
+        font-size: 35px;
+    }
+
+    .center2 a {
+        font-size: 45px;
+    }
+
+    .center3 {
+        width: 95%;
+        max-width: none;
+    }
+
+    .center3 a {
+        font-size: 16px;
+    }
+
+    .buton {
+        padding: 8px 12px; /* O'ng/chap paddingni kamaytirdik (15px dan 12px ga) */
+        font-size: 15px;
+        margin-top: 20px;
+        white-space: normal;
+        display: inline-block;
+    }
+}
+
+/* Kichik telefonlar (masalan, 576px gacha) */
+@media (max-width: 576px) {
+     nav {
+        padding: 0 10px;
+        flex-direction: column;
+        align-items: center;
+     }
+     .nav-left {
+         margin-bottom: 5px;
+     }
+
+     .nav-left a {
+         font-size: 18px;
+     }
+
+     .nav-right {
+        gap: 0.3em;
+     }
+
+    .nav-right a {
+        font-size: 14px;
+        padding: 4px 8px;
+        border-bottom: none;
+    }
+
+
+    section {
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .center1,
+    .center2,
+    .center3,
+    .buton {
+         margin-right: auto;
+        margin-left: auto;
+    }
+
+    .center1 a {
+        font-size: 28px;
+    }
+
+    .center2 a {
+        font-size: 35px;
+    }
+
+    .center3 a {
+        font-size: 14px;
+    }
+
+    .buton {
+        padding: 6px 8px; /* O'ng/chap paddingni kamaytirdik (12px dan 8px ga) */
+        font-size: 12px;
+        margin-top: 15px;
+        white-space: normal;
+    }
+}
